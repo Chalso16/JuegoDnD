@@ -9,7 +9,7 @@ Personaje::Personaje():nombre(""), vida(100), poderBase(0), elemento('F') {
 }
 
 Personaje::Personaje(const string &nombre, const int &vida, const int &poderBase, const char &elemento):nombre(nombre), vida(vida), poderBase(poderBase), elemento(elemento) {
-    if (vida<0) {
+    if (vida<=0) {
         throw invalid_argument("Vida fuera de parametros");
     }
     if (poderBase<0) {
@@ -54,7 +54,7 @@ void Personaje::setVida(const int &vida) {
 }
 
 void Personaje::setPoderBase(const int &poderBase) {
-    if (poderBase<0) {
+    if (poderBase<=0) {
         throw invalid_argument("Vida fuera de parametros");
     }
     this->poderBase=poderBase;

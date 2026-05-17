@@ -57,9 +57,9 @@ void Mago::lanzarHechizo(int idHechizo, Personaje &objetivo) {
             break;
         default: throw invalid_argument("Hechizo desconocido");
     }
-    if (getElemento()=='P' && elementoHechizo=='F' ||
-        getElemento()=='F' && elementoHechizo=='A' ||
-        getElemento()=='A' && elementoHechizo=='P'){
+    if (objetivo.getElemento()=='P' && elementoHechizo=='F' ||
+        objetivo.getElemento()=='F' && elementoHechizo=='A' ||
+        objetivo.getElemento()=='A' && elementoHechizo=='P'){
         danio = danio*2.0;
     }
     objetivo.recibirDanio(danio);

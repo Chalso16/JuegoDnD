@@ -18,7 +18,7 @@ int main() {
         personajes.push_back(g2);
         //3
         cout << "Son ambos guerreros iguales? ";
-        if (g1==g2) {
+        if (*g1==*g2) {
             cout << "SI" << endl;
         }else {
             cout << "NO" << endl;
