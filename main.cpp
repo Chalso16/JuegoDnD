@@ -17,7 +17,7 @@ int main() {
         personajes.push_back(g1);
         personajes.push_back(g2);
         //3
-        cout << "¿Son ambos guerreros iguales? ";
+        cout << "Son ambos guerreros iguales? ";
         if (g1==g2) {
             cout << "SI" << endl;
         }else {
@@ -28,8 +28,9 @@ int main() {
         ++(*g3);
         personajes.push_back(g3);
         //5
-        shared_ptr<Mago> m1 = make_shared<Mago>("Elias", 75, 35, 'P', 20);
+        shared_ptr<Mago> m1 = make_shared<Mago>("Elias", 75, 35, 'P', 5);
         personajes.push_back(m1);
+
         //6
         try {
             try {
@@ -42,9 +43,9 @@ int main() {
         }
         //7
         Equipo<shared_ptr<Personaje>> team;
-        team.reclutar(g1);
-        team.reclutar(g2);
-        team.reclutar(m1);
+        for (const shared_ptr<Personaje>& personaje : personajes) {
+            team.reclutar(personaje);
+        }
         team.mostrarEquipo();
 
     }catch (const invalid_argument& e) {

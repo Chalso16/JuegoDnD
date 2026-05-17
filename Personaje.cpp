@@ -73,6 +73,7 @@ ostream &operator<<(ostream &os, const Personaje &personaje) {
     os << "-->Vida: " << personaje.vida << endl;
     os << "-->PoderBase: " << personaje.poderBase << endl;
     os << "-->Elemento: " << personaje.elemento << endl;
+    return os;
 }
 
 bool Personaje::operator==(const Personaje &personaje) const {
